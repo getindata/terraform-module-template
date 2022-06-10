@@ -1,0 +1,27 @@
+repos:
+  - repo: https://github.com/gruntwork-io/pre-commit
+    rev: "v0.1.17" # Get the latest from: https://github.com/gruntwork-io/pre-commit/releases
+    hooks:
+      - id: tflint
+        args:
+          - --module
+          - --config=.tflint.hcl
+      - id: terraform-validate
+      - id: terraform-fmt
+
+  - repo: https://github.com/terraform-docs/terraform-docs
+    rev: "v0.16.0" # Get the latest from: https://github.com/antonbabenko/pre-commit-terraform/releases
+    hooks:
+      - id: terraform-docs-go
+        args: ["."]
+
+  - repo: https://github.com/bridgecrewio/checkov.git
+    rev: '2.0.1161' # Get the latest from: https://github.com/bridgecrewio/checkov/releases
+    hooks:
+      - id: checkov
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: "v4.3.0" # Get the latest from: https://github.com/pre-commit/pre-commit-hooks/releases
+    hooks:
+      - id: check-merge-conflict
+      - id: end-of-file-fixer
