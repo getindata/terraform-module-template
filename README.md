@@ -12,8 +12,7 @@
 
 <p align="center">
   <img height="100" src="https://getindata.com/img/logo.svg">
-  </br>
-  <h3>We help companies turn their data into assets</h3>
+  <h3 align="center">We help companies turn their data into assets</h3>
 </p>
 
 _Brief Description of MODULE:_
