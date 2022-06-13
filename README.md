@@ -2,13 +2,17 @@
 
 
 > **Warning**: 
-> This is a template document. Remember to **remove** all text in _italics_ and **update** _REPO_NAME_ and _MODULE_NAME_ to the acual name of your GitHub repository/module!!!
+> This is a template document. Remember to **remove** all text in _italics_ and **update** Module name, Repo name and links/badges to the acual name of your GitHub repository/module!!!
 
+<!--- Pick Cloud provider Badge -->
+<!---![Azure](https://img.shields.io/badge/azure-%230072C6.svg?style=for-the-badge&logo=microsoftazure&logoColor=white) -->
+<!---![Google Cloud](https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white) -->
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 ![Terraform](https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white)
 
-![License](https://badgen.net/github/license/getindata/REPO_NAME/)
-![Release](https://badgen.net/github/release/getindata/REPO_NAME/)
+<!--- Replace repository name -->
+![License](https://badgen.net/github/license/getindata/terraform-module-template/)
+![Release](https://badgen.net/github/release/getindata/terraform-module-template/)
 
 <p align="center">
   <img height="150" src="https://getindata.com/img/logo.svg">
@@ -31,7 +35,7 @@ _Example usage of the module - terraform code snippet_
 
 ## EXAMPLES
 
-* _List of links to example implementations in [example](https://github.com/getindata/terraform-module-template/blob/main/example) repo directory_
+* _List of links to example implementations in [example](https://github.com/getindata/terraform-module-template/example) repo directory_
 
 ## NOTES
 
@@ -53,8 +57,9 @@ Apache 2 Licensed. See [LICENSE](LICENSE) for full details.
 
 ## AUTHORS
 
+<!--- Replace repository name -->
 <a href="https://github.com/getindata/REPO_NAME/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=getindata/REPO_NAME" />
+  <img src="https://contrib.rocks/image?repo=getindata/terraform-module-template" />
 </a>
 
 Made with [contrib.rocks](https://contrib.rocks).
