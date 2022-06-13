@@ -13,6 +13,11 @@
 ![GetInData](https://getindata.com/img/logo.svg)
 <font size="+3">**We help companies turn their data into assets**</font>
 
+<p align="center">
+  <img height="100" src="https://getindata.com/img/logo.svg">
+  **We help companies turn their data into assets**
+</p>
+
 _Brief Description of MODULE:_
 
 * _What it does_
