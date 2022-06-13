@@ -10,8 +10,12 @@
 ![License](https://badgen.net/github/license/getindata/REPO_NAME/)
 ![Release](https://badgen.net/github/release/getindata/REPO_NAME/)
 
-![GetInData](https://getindata.com/img/logo.svg)
-<center><font size="8"><b>We help companies turn their data into assets</b></font></center>
+<p align="center">
+  <img height="150" src="https://getindata.com/img/logo.svg">
+  <h3 align="center">We help companies turn their data into assets</h3>
+</p>
+
+---
 
 _Brief Description of MODULE:_
 
