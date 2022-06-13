@@ -11,7 +11,7 @@
 ![Release](https://badgen.net/github/release/getindata/REPO_NAME/)
 
 ![GetInData](https://getindata.com/img/logo.svg)
-<center><font size="+3">**We help companies turn their data into assets**</font></center>
+<font size="+3">**We help companies turn their data into assets**</font>
 
 _Brief Description of MODULE:_
 
