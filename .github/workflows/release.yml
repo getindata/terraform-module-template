@@ -1,0 +1,59 @@
+name: Create new release with changelog
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        fetch-depth: 50
+
+      - name: Get latest release
+        id: get-latest-release
+        uses: InsonusK/get-latest-release@v1.0.1
+        with:
+          myToken: "${{ secrets.REPO_TOKEN }}"
+          exclude: "draft|prerelease"
+          view_top: 1
+
+      - name: Get next tag
+        id: next-tag
+        run: |
+          prev_version=$(echo "${{ steps.get-latest-release.outputs.tag_name }}" | sed -E 's/\..*//g')
+          echo "Previous version: $((prev_version))"
+          echo "Next version: $((prev_version+1))"
+          echo "::set-output name=tag::$((prev_version+1)).0"
+
+      - name: Create tag
+        uses: tvdias/github-tagger@v0.0.1
+        with:
+          repo-token: "${{ secrets.REPO_TOKEN }}"
+          tag: "${{ steps.next-tag.outputs.tag }}"
+
+      - name: Generate new release with changelog
+        id: release-with-changelog
+        uses: fregante/release-with-changelog@v3
+        with:
+          token: "${{ secrets.REPO_TOKEN }}"
+          exclude: '^meta|^docs|^document|^lint|^ci|^refactor|readme|workflow|bump|dependencies|yml|^v?\d+\.\d+\.\d+'
+          tag: "${{ steps.next-tag.outputs.tag }}"
+          title: "Version ${{ steps.next-tag.outputs.tag }}"
+          commit-template: '- {title} ← {hash}'
+          skip-on-empty: true
+          template: |
+            ### Changelog
+
+            {commits}
+
+            {range}
+
+      - name: Delete tag if release skipped
+        if: ${{ steps.release-with-changelog.outputs.skipped == 'true' }}
+        run: |
+          git tag -d ${{ steps.next-tag.outputs.tag }}
+          git push origin :refs/tags/${{ steps.next-tag.outputs.tag }}
