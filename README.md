@@ -50,6 +50,8 @@ module "terraform-module-template" {
 
 
 
+
+
 ## Inputs
 
 | Name | Description | Type | Default | Required |
@@ -74,11 +76,36 @@ module "terraform-module-template" {
 | <a name="input_tags"></a> [tags](#input\_tags) | Additional tags (e.g. `{'BusinessUnit': 'XYZ'}`).<br>Neither the tag keys nor the tag values will be modified by this module. | `map(string)` | `{}` | no |
 | <a name="input_tenant"></a> [tenant](#input\_tenant) | ID element \_(Rarely used, not included by default)\_. A customer identifier, indicating who this instance of a resource is for | `string` | `null` | no |
 
+## Modules
+
+| Name | Source | Version |
+|------|--------|---------|
+| <a name="module_this"></a> [this](#module\_this) | cloudposse/label/null | 0.25.0 |
+
 ## Outputs
 
 | Name | Description |
 |------|-------------|
 | <a name="output_example_output"></a> [example\_output](#output\_example\_output) | Example output of the module |
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| <a name="provider_null"></a> [null](#provider\_null) | 3.1.1 |
+
+## Requirements
+
+| Name | Version |
+|------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.13.0 |
+| <a name="requirement_null"></a> [null](#requirement\_null) | 3.1.1 |
+
+## Resources
+
+| Name | Type |
+|------|------|
+| [null_resource.output-input](https://registry.terraform.io/providers/hashicorp/null/3.1.1/docs/resources/resource) | resource |
 <!-- END_TF_DOCS -->
 
 ## CONTRIBUTING
