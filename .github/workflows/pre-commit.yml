@@ -71,6 +71,9 @@ jobs:
         id: minMax
         uses: clowdhaus/terraform-min-max@v1.0.3
 
+        # Step required as tflint pre-commit hook requires module to be initialised
+      - run: terraform init
+
       - name: Pre-commit Terraform ${{ steps.minMax.outputs.maxVersion }}
         uses: clowdhaus/terraform-composite-actions/pre-commit@v1.3.0
         with:
