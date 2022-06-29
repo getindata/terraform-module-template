@@ -1,4 +1,4 @@
-module "terraform-module-template" {
+module "terraform_module_template" {
   source  = "../../"
   context = module.this.context
 

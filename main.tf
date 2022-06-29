@@ -1,7 +1,7 @@
 # Example resource that outputs the input value and 
 # echoes it's base64 encoded version locally 
 
-resource "null_resource" "output-input" {
+resource "null_resource" "output_input" {
 
   triggers = {
     input = var.example_var
