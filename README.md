@@ -40,7 +40,7 @@ _Additional information that should be made public, for ex. how to solve known i
 <!-- BEGIN_TF_DOCS -->
 ## EXAMPLES
 ```hcl
-module "terraform-module-template" {
+module "terraform_module_template" {
   source  = "../../"
   context = module.this.context
 
@@ -105,7 +105,7 @@ module "terraform-module-template" {
 
 | Name | Type |
 |------|------|
-| [null_resource.output-input](https://registry.terraform.io/providers/hashicorp/null/3.1.1/docs/resources/resource) | resource |
+| [null_resource.output_input](https://registry.terraform.io/providers/hashicorp/null/3.1.1/docs/resources/resource) | resource |
 <!-- END_TF_DOCS -->
 
 ## CONTRIBUTING
