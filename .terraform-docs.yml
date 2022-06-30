@@ -6,6 +6,28 @@ sections:
   hide: []
   show: [all]
 
+content: |-
+  ## EXAMPLES
+  ```hcl
+  {{ include "example/full-example/main.tf" }}
+  ```
+
+  {{ .Header }}
+
+  {{ .Footer }}
+
+  {{ .Inputs }}
+
+  {{ .Modules }}
+
+  {{ .Outputs }}
+
+  {{ .Providers }}
+
+  {{ .Requirements }}
+
+  {{ .Resources }}
+
 output:
   file: "README.md"
   mode: inject

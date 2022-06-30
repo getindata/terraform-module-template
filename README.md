@@ -1,7 +1,7 @@
 # MODULE_NAME
 
 
-> **Warning**: 
+> **Warning**:
 > This is a template document. Remember to **remove** all text in _italics_ and **update** Module name, Repo name and links/badges to the acual name of your GitHub repository/module!!!
 
 <!--- Pick Cloud provider Badge -->
@@ -33,40 +33,20 @@ _Example usage of the module - terraform code snippet_
 ```terraform
 ```
 
-## EXAMPLES
-
-* _List of links to example implementations in [example](https://github.com/getindata/terraform-module-template/example) repo directory_
-* Full usage example - [full-example](example/full-example/)
-
 ## NOTES
 
 _Additional information that should be made public, for ex. how to solve known issues, additional descriptions/suggestions_
 
 <!-- BEGIN_TF_DOCS -->
-## Requirements
+## EXAMPLES
+```hcl
+module "terraform_module_template" {
+  source  = "../../"
+  context = module.this.context
 
-| Name | Version |
-|------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.13.0 |
-| <a name="requirement_null"></a> [null](#requirement\_null) | 3.1.1 |
-
-## Providers
-
-| Name | Version |
-|------|---------|
-| <a name="provider_null"></a> [null](#provider\_null) | 3.1.1 |
-
-## Modules
-
-| Name | Source | Version |
-|------|--------|---------|
-| <a name="module_this"></a> [this](#module\_this) | cloudposse/label/null | 0.25.0 |
-
-## Resources
-
-| Name | Type |
-|------|------|
-| [null_resource.output-input](https://registry.terraform.io/providers/hashicorp/null/3.1.1/docs/resources/resource) | resource |
+  example_var = "This is example value."
+}
+```
 
 ## Inputs
 
@@ -92,11 +72,36 @@ _Additional information that should be made public, for ex. how to solve known i
 | <a name="input_tags"></a> [tags](#input\_tags) | Additional tags (e.g. `{'BusinessUnit': 'XYZ'}`).<br>Neither the tag keys nor the tag values will be modified by this module. | `map(string)` | `{}` | no |
 | <a name="input_tenant"></a> [tenant](#input\_tenant) | ID element \_(Rarely used, not included by default)\_. A customer identifier, indicating who this instance of a resource is for | `string` | `null` | no |
 
+## Modules
+
+| Name | Source | Version |
+|------|--------|---------|
+| <a name="module_this"></a> [this](#module\_this) | cloudposse/label/null | 0.25.0 |
+
 ## Outputs
 
 | Name | Description |
 |------|-------------|
 | <a name="output_example_output"></a> [example\_output](#output\_example\_output) | Example output of the module |
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| <a name="provider_null"></a> [null](#provider\_null) | 3.1.1 |
+
+## Requirements
+
+| Name | Version |
+|------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.13.0 |
+| <a name="requirement_null"></a> [null](#requirement\_null) | 3.1.1 |
+
+## Resources
+
+| Name | Type |
+|------|------|
+| [null_resource.output_input](https://registry.terraform.io/providers/hashicorp/null/3.1.1/docs/resources/resource) | resource |
 <!-- END_TF_DOCS -->
 
 ## CONTRIBUTING
