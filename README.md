@@ -1,4 +1,4 @@
-# MODULE_NAME
+# Terraform Module Template
 
 
 > **Warning**:
