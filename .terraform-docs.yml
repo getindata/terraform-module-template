@@ -7,11 +7,6 @@ sections:
   show: [all]
 
 content: |-
-  ## EXAMPLES
-  ```hcl
-  {{ include "example/full-example/main.tf" }}
-  ```
-
   {{ .Header }}
 
   {{ .Footer }}
