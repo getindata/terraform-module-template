@@ -31,23 +31,22 @@ _Brief Description of MODULE:_
 _Example usage of the module - terraform code snippet_
 
 ```terraform
+module "template" {
+  source = "github.com/getindata/terraform-module-template"
+
+  example_var = "foo"
+}
 ```
 
 ## NOTES
 
 _Additional information that should be made public, for ex. how to solve known issues, additional descriptions/suggestions_
 
-<!-- BEGIN_TF_DOCS -->
 ## EXAMPLES
-```hcl
-module "terraform_module_template" {
-  source  = "../../"
-  context = module.this.context
 
-  example_var = "This is example value."
-}
-```
+- [Full example](examples/full-example)
 
+<!-- BEGIN_TF_DOCS -->
 
 
 
