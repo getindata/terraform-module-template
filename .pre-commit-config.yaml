@@ -16,7 +16,7 @@ repos:
         args: ["."]
 
   - repo: https://github.com/bridgecrewio/checkov.git
-    rev: '2.0.1161' # Get the latest from: https://github.com/bridgecrewio/checkov/releases
+    rev: "2.2.168" # Get the latest from: https://github.com/bridgecrewio/checkov/releases
     hooks:
       - id: checkov
 
