@@ -1,3 +1,9 @@
+config {
+  ignore_module = {
+    "Invicton-Labs/deepmerge/null" = true
+  }
+}
+
 rule "terraform_deprecated_interpolation" {
   enabled = true
 }

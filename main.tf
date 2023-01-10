@@ -2,6 +2,8 @@
 # echoes it's base64 encoded version locally 
 
 resource "null_resource" "output_input" {
+  count = local.enabled ? 1 : 0
+
   triggers = {
     name  = local.name_from_descriptor
     input = var.example_var

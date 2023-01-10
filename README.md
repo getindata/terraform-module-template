@@ -48,7 +48,8 @@ _Additional information that should be made public, for ex. how to solve known i
 
 ## EXAMPLES
 
-- [Full example](examples/full-example)
+- [Simple](examples/simple) - Basic usage of the module
+- [Complete](examples/complete) - Advanced usage of the module
 
 <!-- BEGIN_TF_DOCS -->
 
