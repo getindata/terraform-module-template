@@ -8,7 +8,6 @@ on:
 
 env:
   TERRAFORM_DOCS_VERSION: v0.16.0
-  # TFLINT_VERSION: v0.41.0 # use this version with "Invicton-Labs/deepmerge/null" module
 
 jobs:
   collectInputs:

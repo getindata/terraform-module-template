@@ -36,7 +36,8 @@ _Example usage of the module - terraform code snippet_
 
 ```terraform
 module "template" {
-  source = "github.com/getindata/terraform-module-template"
+  source = "getindata/template/null"
+  # version  = "x.x.x"
 
   example_var = "foo"
 }
@@ -48,7 +49,8 @@ _Additional information that should be made public, for ex. how to solve known i
 
 ## EXAMPLES
 
-- [Full example](examples/full-example)
+- [Simple](examples/simple) - Basic usage of the module
+- [Complete](examples/complete) - Advanced usage of the module
 
 <!-- BEGIN_TF_DOCS -->
 
@@ -101,7 +103,7 @@ _Additional information that should be made public, for ex. how to solve known i
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.13.0 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.15.0 |
 | <a name="requirement_null"></a> [null](#requirement\_null) | 3.1.1 |
 
 ## Resources

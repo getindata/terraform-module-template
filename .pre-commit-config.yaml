@@ -16,9 +16,10 @@ repos:
         args: ["."]
 
   - repo: https://github.com/bridgecrewio/checkov.git
-    rev: "2.2.168" # Get the latest from: https://github.com/bridgecrewio/checkov/releases
+    rev: "2.2.246" # Get the latest from: https://github.com/bridgecrewio/checkov/releases
     hooks:
       - id: checkov
+        args: [--skip-check, "CKV2_GHA_1"] #Flase positive for top-level permissions
 
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: "v4.3.0" # Get the latest from: https://github.com/pre-commit/pre-commit-hooks/releases
