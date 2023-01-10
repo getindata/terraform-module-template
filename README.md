@@ -36,7 +36,8 @@ _Example usage of the module - terraform code snippet_
 
 ```terraform
 module "template" {
-  source = "github.com/getindata/terraform-module-template"
+  source = "getindata/template/null"
+  # version  = "x.x.x"
 
   example_var = "foo"
 }
