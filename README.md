@@ -25,7 +25,7 @@
 _Brief Description of MODULE:_
 
 * _What it does_
-* _What techonlogies it uses_
+* _What technologies it uses_
 
 > **Warning**:
 > _When using "Invicton-Labs/deepmerge/null" module - pin `tflint` version to `v0.41.0` in [pre-commit.yaml](.github/workflows/pre-commit.yml) to avoid failing `tflint` checks_
