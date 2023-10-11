@@ -1,4 +1,8 @@
-name: 'Validate PR title'
+name: Validate PR title
+
+permissions:
+  pull-requests: read
+  statuses: write
 
 on:
   pull_request_target:
@@ -9,4 +13,4 @@ on:
 
 jobs:
   main:
-    uses: getindata/github-workflows/.github/workflows/gh-validate-pr-title.yml@v0.3.0
+    uses: getindata/github-workflows/.github/workflows/gh-validate-pr-title.yml@v0.3.1

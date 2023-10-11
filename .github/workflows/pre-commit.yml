@@ -1,4 +1,6 @@
-name: Pre-Commit
+name: TF Pre-Commit
+
+permissions: {}
 
 on:
   pull_request:
@@ -8,4 +10,4 @@ on:
 
 jobs:
   main:
-    uses: getindata/github-workflows/.github/workflows/tf-pre-commit.yml@v0.3.0
+    uses: getindata/github-workflows/.github/workflows/tf-pre-commit.yml@v0.3.1
