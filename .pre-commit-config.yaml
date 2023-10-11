@@ -16,13 +16,18 @@ repos:
         args: ["."]
 
   - repo: https://github.com/bridgecrewio/checkov.git
-    rev: "2.4.48" # Get the latest from: https://github.com/bridgecrewio/checkov/releases
+    rev: "2.5.6" # Get the latest from: https://github.com/bridgecrewio/checkov/releases
     hooks:
       - id: checkov
-        args: [--skip-check, "CKV2_GHA_1,CKV_TF_1"] #False positive for top-level permissions
+        args: [--skip-check, "CKV_TF_1"] # Terraform module sources do not use a git url with a commit hash revision
 
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: "v4.4.0" # Get the latest from: https://github.com/pre-commit/pre-commit-hooks/releases
+    rev: "v4.5.0" # Get the latest from: https://github.com/pre-commit/pre-commit-hooks/releases
     hooks:
       - id: check-merge-conflict
+        args: ["--assume-in-merge"]
+      - id: mixed-line-ending
+        args: ["--fix=no"]
       - id: end-of-file-fixer
+      - id: check-case-conflict
+      - id: check-yaml
