@@ -12,7 +12,7 @@ variable "descriptor_name" {
 variable "sub_resource" {
   description = "Some other resource that is part of stack/module"
   type = object({
-    descriptor_name = optional(string, "sub-reseource-type")
+    descriptor_name = optional(string, "sub-resource-type")
     example_var     = string
   })
 }
