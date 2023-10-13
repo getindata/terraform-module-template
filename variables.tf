@@ -1,5 +1,5 @@
 variable "example_var" {
-  description = "Example varible passed into the module"
+  description = "Example variable passed into the module"
   type        = string
 }
 
