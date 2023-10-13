@@ -6,7 +6,7 @@ variable "example_var" {
 variable "descriptor_name" {
   description = "Name of the descriptor used to form a resource name"
   type        = string
-  default     = "reseource-type"
+  default     = "resource-type"
 }
 
 variable "sub_resource" {
