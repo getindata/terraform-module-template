@@ -106,7 +106,7 @@ _Additional information that should be made public, for ex. how to solve known i
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.15.0 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.3.0 |
 | <a name="requirement_null"></a> [null](#requirement\_null) | 3.1.1 |
 
 ## Resources
