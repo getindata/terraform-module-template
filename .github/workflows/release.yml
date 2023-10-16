@@ -6,4 +6,4 @@ on:
 
 jobs:
   release:
-    uses: getindata/github-workflows/.github/workflows/gh-create-release.yml@v0.3.0
+    uses: getindata/github-workflows/.github/workflows/gh-create-release.yml@v0.3.1
