@@ -1,9 +1,3 @@
-config {
-  ignore_module = {
-    "Invicton-Labs/deepmerge/null" = true
-  }
-}
-
 plugin "terraform" {
     enabled = true
     version = "0.5.0"
