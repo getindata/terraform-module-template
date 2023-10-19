@@ -18,7 +18,7 @@ repos:
         args: ["."]
 
   - repo: https://github.com/bridgecrewio/checkov.git
-    rev: "2.5.9" # Get the latest from: https://github.com/bridgecrewio/checkov/releases
+    rev: "2.5.13" # Get the latest from: https://github.com/bridgecrewio/checkov/releases
     hooks:
       - id: checkov
         args: [--skip-check, "CKV_TF_1"] # Terraform module sources do not use a git url with a commit hash revision

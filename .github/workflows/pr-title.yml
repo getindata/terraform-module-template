@@ -13,4 +13,4 @@ on:
 
 jobs:
   main:
-    uses: getindata/github-workflows/.github/workflows/gh-validate-pr-title.yml@v0.3.1
+    uses: getindata/github-workflows/.github/workflows/gh-validate-pr-title.yml@v1
