@@ -1,8 +1,10 @@
 repos:
   - repo: https://github.com/gruntwork-io/pre-commit
-    rev: "v0.1.22" # Get the latest from: https://github.com/gruntwork-io/pre-commit/releases
+    # Stick to v0.1.20 until this bug is fixed: https://github.com/gruntwork-io/pre-commit/issues/102
+    # When updating, also check if tflint version in pre-commit workflow can be updated.
+    rev: "v0.1.20" # Get the latest from: https://github.com/gruntwork-io/pre-commit/releases
     hooks:
-      - id: terraform-validate # It should be before tflint hook as it runs terraform init required by tflint
+      - id: terraform-validate # It should be the first step as it runs terraform init required by tflint
       - id: terraform-fmt
       - id: tflint
         args:
@@ -16,13 +18,18 @@ repos:
         args: ["."]
 
   - repo: https://github.com/bridgecrewio/checkov.git
-    rev: "2.4.48" # Get the latest from: https://github.com/bridgecrewio/checkov/releases
+    rev: "2.5.13" # Get the latest from: https://github.com/bridgecrewio/checkov/releases
     hooks:
       - id: checkov
-        args: [--skip-check, "CKV2_GHA_1,CKV_TF_1"] #False positive for top-level permissions
+        args: [--skip-check, "CKV_TF_1"] # Terraform module sources do not use a git url with a commit hash revision
 
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: "v4.4.0" # Get the latest from: https://github.com/pre-commit/pre-commit-hooks/releases
+    rev: "v4.5.0" # Get the latest from: https://github.com/pre-commit/pre-commit-hooks/releases
     hooks:
       - id: check-merge-conflict
+        args: ["--assume-in-merge"]
+      - id: mixed-line-ending
+        args: ["--fix=no"]
       - id: end-of-file-fixer
+      - id: check-case-conflict
+      - id: check-yaml
