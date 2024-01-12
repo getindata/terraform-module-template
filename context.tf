@@ -257,6 +257,15 @@ variable "label_value_case" {
   }
 }
 
+variable "descriptor_name" {
+  type        = string
+  default     = "resource-type"
+  description = <<-EOT
+    Name of the descriptor used to form a resource name
+  EOT
+}
+
+
 variable "descriptor_formats" {
   type        = any
   default     = {}

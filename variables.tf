@@ -3,12 +3,6 @@ variable "example_var" {
   type        = string
 }
 
-variable "descriptor_name" {
-  description = "Name of the descriptor used to form a resource name"
-  type        = string
-  default     = "resource-type"
-}
-
 variable "sub_resource" {
   description = "Some other resource that is part of stack/module"
   type = object({
