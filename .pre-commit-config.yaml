@@ -2,14 +2,11 @@ repos:
   - repo: https://github.com/gruntwork-io/pre-commit
     # Stick to v0.1.20 until this bug is fixed: https://github.com/gruntwork-io/pre-commit/issues/102
     # When updating, also check if tflint version in pre-commit workflow can be updated.
-    rev: "v0.1.20" # Get the latest from: https://github.com/gruntwork-io/pre-commit/releases
+    rev: "v0.1.23" # Get the latest from: https://github.com/gruntwork-io/pre-commit/releases
     hooks:
       - id: terraform-validate # It should be the first step as it runs terraform init required by tflint
       - id: terraform-fmt
       - id: tflint
-        args:
-          - --module
-          - --config=.tflint.hcl
 
   - repo: https://github.com/terraform-docs/terraform-docs
     rev: "v0.16.0" # Get the latest from: https://github.com/terraform-docs/terraform-docs/releases
