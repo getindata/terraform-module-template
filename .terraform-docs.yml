@@ -2,6 +2,10 @@ formatter: "md tbl" # this is required
 
 version: ">= 0.14"
 
+recursive:
+  enabled: true
+  path: ./examples
+
 sections:
   hide: []
   show: [all]
