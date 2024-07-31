@@ -2,7 +2,7 @@
 
 
 > **Warning**:
-> This is a template document. Remember to **remove** all text in _italics_ and **update** Module name, Repo name and links/badges to the acual name of your GitHub repository/module!!!
+> This is a template document. Remember to **remove** all text in _italics_ and **update** Module name, Repo name and links/badges to the actual name of your GitHub repository/module!!!
 
 <!--- Pick Cloud provider Badge -->
 <!---![Azure](https://img.shields.io/badge/azure-%230072C6.svg?style=for-the-badge&logo=microsoftazure&logoColor=white) -->
