@@ -48,6 +48,7 @@ No providers.
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.3.0 |
+| <a name="requirement_context"></a> [context](#requirement\_context) | ~> 0.4.0 |
 | <a name="requirement_null"></a> [null](#requirement\_null) | 3.1.1 |
 
 ## Resources
