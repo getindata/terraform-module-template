@@ -8,5 +8,9 @@ terraform {
       source  = "hashicorp/null"
       version = "3.1.1"
     }
+    context = {
+      source  = "cloudposse/context"
+      version = "~> 0.4.0"
+    }
   }
 }

@@ -1,11 +1,35 @@
 # Example resource that outputs the input value and 
 # echoes it's base64 encoded version locally 
 
-resource "null_resource" "output_input" {
-  count = local.enabled ? 1 : 0
+data "context_label" "this" {
+  delimiter  = local.context_template == null ? var.name_scheme.delimiter : null
+  properties = local.context_template == null ? var.name_scheme.properties : null
+  template   = local.context_template
 
+  replace_chars_regex = var.name_scheme.replace_chars_regex
+
+  values = merge(
+    var.name_scheme.extra_values,
+    { name = var.name }
+  )
+}
+
+data "context_label" "subresource" {
+  delimiter  = local.subresource_context_template == null ? var.name_scheme.delimiter : null
+  properties = local.subresource_context_template == null ? var.name_scheme.properties : null
+  template   = local.subresource_context_template
+
+  replace_chars_regex = var.name_scheme.replace_chars_regex
+
+  values = merge(
+    var.name_scheme.extra_values,
+    { name = var.name }
+  )
+}
+
+resource "null_resource" "output_input" {
   triggers = {
-    name  = local.name_from_descriptor
+    name  = var.name_scheme.uppercase ? upper(data.context_label.this.rendered) : data.context_label.this.rendered
     input = var.example_var
   }
 
@@ -14,19 +38,9 @@ resource "null_resource" "output_input" {
   }
 }
 
-module "subresource_label" {
-  source  = "cloudposse/label/null"
-  version = "0.25.0"
-  context = module.this.context
-
-  attributes = ["sub"]
-}
-
 resource "null_resource" "subresource" {
-  count = local.enabled ? 1 : 0
-
   triggers = {
-    name  = local.subresource_name_from_descriptor
+    name  = var.name_scheme.uppercase ? upper(data.context_label.subresource.rendered) : data.context_label.subresource.rendered
     input = var.sub_resource.example_var
   }
 

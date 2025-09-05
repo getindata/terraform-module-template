@@ -1,23 +1,37 @@
 # Complete Example
 
-```terraform
-module "terraform_module_template" {
-  source  = "../../"
-  context = module.this.context
+This example demonstrates the full capabilities of the terraform-module-template using the context provider for advanced naming schemes and configurations.
 
-  example_var = "This is a example value."
-  sub_resource = {
-    example_var = "This is a example value of sub resource."
-  }
-}
-```
+## Features Demonstrated
+
+- Context provider integration with custom properties
+- Advanced naming scheme configuration
+- Custom context templates for flexible naming patterns
+- Sub-resource handling
 
 ## Usage
-```
-terraform init
-terraform plan -var-file fixtures.tfvars -out tfplan
-terraform apply tfplan
-```
+
+1. Initialize Terraform:
+   ```bash
+   terraform init
+   ```
+
+2. Plan with the fixtures file:
+   ```bash
+   terraform plan -var-file="fixtures.tfvars"
+   ```
+
+3. Apply the configuration:
+   ```bash
+   terraform apply -var-file="fixtures.tfvars"
+   ```
+
+## Configuration Files
+
+- `main.tf` - Module instantiation with hardcoded values
+- `providers.tf` - Provider configurations (context and null providers)
+- `fixtures.tfvars` - Context templates configuration
+- `versions.tf` - Provider version constraints
 
 <!-- BEGIN_TF_DOCS -->
 
